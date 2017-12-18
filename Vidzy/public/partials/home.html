@@ -1,0 +1,26 @@
+<h1>Home Page</h1>
+<table>
+        <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    <!-- <li ng-repeat='video in videos'>{{video.title}}</li> -->
+        <tr ng-repeat='video in videos'>
+            <td><a href="/#/video/read/{{video._id}}"><img ng-src="{{picture.picture+video.title}}_tn.png"/></a></td>
+            <td><a href="/#/video/read/{{video._id}}">
+                {{video.title}}
+            </a></td>
+            <td><a href="/#/video/{{video._id}}">
+                <i class="glyphicon glyphicon-pencil"></i>
+            </a></td>
+            <td><a href="/#/video/delete/{{video._id}}">
+                <i class="glyphicon glyphicon-remove"></i>
+            </a></td>
+        </tr>
+</table>
+
+<p>
+    <a href="/#/add-video">Add a Video</a>
+</p>
